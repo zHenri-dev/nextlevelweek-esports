@@ -21,7 +21,8 @@ module.exports = {
         sans: ['Inter', 'sans-serif'],
       },
       screens: { 
-        xs: { max: '20rem' },
+        'home-xs': { max: '20rem' },
+        'game-xs': { max: '25.125rem' },
         sm: { max: '32.5rem' },
         tiny: { max: '43.125rem' },
         lg: { max: '49.375rem' },
