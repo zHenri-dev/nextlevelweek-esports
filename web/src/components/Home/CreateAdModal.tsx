@@ -116,7 +116,7 @@ export function CreateAdModal({ games }: CreateAdModalProps) {
       <Dialog.Portal>
         <Dialog.Overlay className="bg-black/60 inset-0 fixed" />
 
-        <Dialog.Content className="absolute w-full max-h-[100vh] top-0 overflow-auto">
+        <Dialog.Content className="absolute w-full h-[100vh] top-0 overflow-auto">
           <div className="bg-[#2a2634] py-8 px-10 text-white rounded-lg w-[480px] m-auto sm:w-[calc(100%-4rem)] my-20">
             <Dialog.Title className="font-black text-3xl">
               Publique um anúncio
