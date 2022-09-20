@@ -40,10 +40,10 @@ export function ConnectModal({ discord }: ConnectModalProps) {
           <Tooltip.Provider>
             <Tooltip.Root onOpenChange={setIsTooltipOpen} open={isTooltipOpen}>
               <button 
-                className={`bg-zinc-900 text-zinc-200 py-3 px-[3.75rem] rounded-[4px] flex items-center justify-center relative ${discord && 'w-full'}`}
+                className={`bg-zinc-900 text-zinc-200 py-3 px-[3.75rem] rounded-[4px] flex items-center justify-center relative ${!discord && 'w-full'}`}
                 onClick={handleCopyDiscord}  
               >
-                {!discord ? `${discord}` : (
+                {discord ? `${discord}` : (
                   <CircleNotch size={20} className="animate-spin" />
                 )}
 
