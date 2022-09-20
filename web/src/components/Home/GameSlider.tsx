@@ -17,6 +17,7 @@ export function GameSlider({ games }: GameSliderProps) {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const [sliderRef, instanceRef] = useKeenSlider({
+    mode: 'free',
     slides: {
       perView: 6.3,
       spacing: 20,

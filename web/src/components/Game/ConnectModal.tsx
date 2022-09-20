@@ -22,7 +22,7 @@ export function ConnectModal({ discord }: ConnectModalProps) {
     <Dialog.Portal>
       <Dialog.Overlay className="bg-black/60 inset-0 fixed" />
 
-      <Dialog.Content className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 py-8 px-10 flex items-center justify-center flex-col gap-6 bg-[#2A2634] rounded-lg">
+      <Dialog.Content className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 py-8 px-10 flex items-center justify-center flex-col gap-6 bg-[#2A2634] rounded-lg w-[18.125rem]">
         <Dialog.Close className="absolute top-4 right-4 text-zinc-500">
           <X size={20} />
         </Dialog.Close>
@@ -40,10 +40,10 @@ export function ConnectModal({ discord }: ConnectModalProps) {
           <Tooltip.Provider>
             <Tooltip.Root onOpenChange={setIsTooltipOpen} open={isTooltipOpen}>
               <button 
-                className={`bg-zinc-900 text-zinc-200 py-3 px-[3.75rem] rounded-[4px] flex items-center justify-center relative ${!discord && 'w-full'}`}
+                className={`bg-zinc-900 text-zinc-200 py-3 px-[3.75rem] rounded-[4px] flex items-center justify-center relative ${discord && 'w-full'}`}
                 onClick={handleCopyDiscord}  
               >
-                {discord ? `${discord}` : (
+                {!discord ? `${discord}` : (
                   <CircleNotch size={20} className="animate-spin" />
                 )}
 
