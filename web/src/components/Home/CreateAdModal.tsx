@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { useForm, Controller } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -45,6 +45,14 @@ type createAdFormInputs = zod.infer<typeof createAdFormSchema>
 
 export function CreateAdModal({ games }: CreateAdModalProps) {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  
+  useEffect(() => {
+    if (isModalOpen) {
+      window.scrollTo({
+        top: 0,
+      })
+    }
+  }, [isModalOpen])
 
   const inputErrorStyle = `border border-red-500 outline-none focus:border-red-700`
 
